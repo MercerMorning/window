@@ -4,7 +4,13 @@
     </ul>
 </div>
 
-<div class="meedget_popup">
+<div class="meedget_popup"
+    <?php if ($_GET['calc'] === 'success'): ?>
+     style="display: block"
+     <?php else: ?>
+     style="display: none"
+     <?php endif; ?>
+>
     <div class="meedget__block container" class="roundcorner"><a class="meedget_close_link" onclick="closeAll()"></a>
         <?php if ($_GET['calc'] === 'success'): ?>
             <div class="stepFinish" style="display: block;"><div><h3>Спасибо, мы скоро с вами свяжемся!</h3></div></div>
