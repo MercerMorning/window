@@ -15,7 +15,7 @@
         <?php if ($_GET['calc'] === 'success'): ?>
             <div class="stepFinish" style="display: block;"><div><h3>Спасибо, мы скоро с вами свяжемся!</h3></div></div>
         <?php elseif ($_GET['calc'] === 'fail'): ?>
-            <div class="stepFinish" style="display: block;"><div><h3>К сожалению не удалось отправить данные, попробуйте еще раз</h3></div></div>
+            <div class="stepFinish" style="display: block;"><div><h3>К сожалению не удалось отправить данные, попробуйте еще раз!</h3></div></div>
         <?php endif; ?>
         <div class="meedget_popup_content" style="display: none;"><h2 class="calc_title">Калькулятор</h2>
             <div id="meedget_calc_inner">
@@ -178,6 +178,10 @@
     }*/
 </script>
 <style>
+    .meedgetwhite {
+        font-family: 'Open Sans Light','Open Sans',Arial !important;
+    }
+
     a.meedget_close_link {
         position: absolute !important;
         right: 0 !important;
@@ -201,7 +205,7 @@
         color: #666 !important;
         line-height: 22px !important;
         font-size: 18px !important;
-        font-family: 'Open Sans Semibold','Open Sans' !important;
+        font-family: 'Open Sans Light','Open Sans',Arial !important;
         font-weight: 600 !important;
         margin: 19px 0 9px !important;
     }
@@ -211,7 +215,7 @@
         position: inherit !important;
         background-position: left !important;
         background-repeat: no-repeat !important;
-        background-color: rgb(173,35,35) !important;
+        background-color: #00bfff !important;
         color: #fff !important;
         font-size: 18px !important;
         border: none !important;
@@ -227,13 +231,13 @@
     #widget_meedget ul > li {
         margin: 0 !important;
         width: 100% !important;
-        background: rgb(173, 35, 35) !important;
+        background: #00bfff !important;
         color: #444 !important;
         font-weight: 700 !important;
         list-style: none !important;
         text-decoration: none !important;
-        border-top: 1px solid rgb(193, 55, 55) !important;
-        border-left: 1px solid rgb(193, 55, 55) !important;
+        border-top: 1px solid #00bfff !important;
+        border-left: 1px solid #00bfff !important;
         padding: 17px !important;
         box-sizing: border-box !important;
         border-top-left-radius: 13px;
@@ -259,10 +263,11 @@
         position: relative !important;
         width: 472px !important;
         background: #fff !important;
-        border: 3px solid rgb(173,35,35) !important;
+        border: 3px solid #00bfff !important;
         padding: 23px 85px 0 !important;
         margin: 3% auto !important;
         border-radius: 13px;
+        font-family: 'Open Sans Light','Open Sans',Arial !important;
     }
 
     .meedget__block.fixed {
