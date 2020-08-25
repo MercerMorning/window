@@ -20,6 +20,7 @@ function modal_form_handler () {
         'wired' => 'Проводная',
         'non-wired' => 'Беспроводная',
     ];
+
     $signalType = null;
     $wireType = null;
 
@@ -34,7 +35,11 @@ function modal_form_handler () {
     }
     $message = $service . '<br>' . $phone . '<br>' . $name . '<br>' . $signalType . ' ' . $wireType;
 
-    wp_mail('hugopochta@gmail.com', 'Заявка с калькулятора', $message);
+    $mail = wp_mail('hugopochta@gmail.com', 'Заявка с калькулятора', $message);
 
-    header('Location: /?calc=success');
+    if (!is_wp_error($mail)) {
+        header('Location: /?calc=success');
+    }
+
+    header('Location: /?calc=fail');
 }

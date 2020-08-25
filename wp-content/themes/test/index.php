@@ -5,7 +5,7 @@
 </div>
 
 <div class="meedget_popup"
-    <?php if ($_GET['calc'] === 'success'): ?>
+    <?php if ($_GET['calc'] === 'success' || $_GET['calc'] === 'fail'): ?>
      style="display: block"
      <?php else: ?>
      style="display: none"
@@ -14,6 +14,8 @@
     <div class="meedget__block container" class="roundcorner"><a class="meedget_close_link" onclick="closeAll()"></a>
         <?php if ($_GET['calc'] === 'success'): ?>
             <div class="stepFinish" style="display: block;"><div><h3>Спасибо, мы скоро с вами свяжемся!</h3></div></div>
+        <?php elseif ($_GET['calc'] === 'fail'): ?>
+            <div class="stepFinish" style="display: block;"><div><h3>К сожалению не удалось отправить данные, попробуйте еще раз</h3></div></div>
         <?php endif; ?>
         <div class="meedget_popup_content" style="display: none;"><h2 class="calc_title">Калькулятор</h2>
             <div id="meedget_calc_inner">
